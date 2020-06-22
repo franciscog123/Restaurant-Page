@@ -6,7 +6,6 @@
 body, html {
     height: 100%;
     margin:0;
-    /*background-color: #d3ac43;*/
     background-image: url(./images/restaurant-background.jpg);
     background-repeat: repeat-y;
     background-size: cover;
@@ -14,13 +13,17 @@ body, html {
     font-family: 'Raleway', sans-serif, Arial, Helvetica, sans-serif;
 }
 
+body{
+  position: absolute;
+}
+
 #content
 {
     height: 100%;
+    text-align: center;
 }
 
 .topnav {
-    /*background-color: #333;*/
     overflow: hidden;
     background-color: #d3ac43;
   }
@@ -83,9 +86,14 @@ body, html {
       padding:5px;
       color:white;
       font-family: 'Raleway', sans-serif, Arial, Helvetica, sans-serif;
-        justify-content: center;
-        align-items: center;
+      justify-content: center;
+      align-items: center;
     }
+
+h2{
+  margin-top: 0;
+  font-size: 35px;
+}
 
 .menu-body 
 {
@@ -94,6 +102,7 @@ body, html {
   display: block;
   color: rbg(92,92,92);
   padding:10px;
+  background-color: #f6f0e8;
 }    
 
 .menu-section{
@@ -103,7 +112,7 @@ body, html {
 
 .menu-section-title
 {
-  font-size:40px;
+  font-size:30px;
   display: block;
   font-weight: normal;
   margin: 20px 0;
@@ -136,3 +145,71 @@ body, html {
   margin-top: -22px;
 }
 
+.contact-container
+{
+  display:flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  overflow-x: hidden;
+  margin:20px 20px;
+}
+
+input[type=text],input[type=email],textarea
+{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit]
+{
+  background-color: #4CAF50;
+  color:white;
+  padding:12px 20px;
+  border:none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover{background-color: #45a049;}
+
+.column
+{
+  margin-top: 6px;
+  padding:20px;
+  margin:auto
+}
+
+.row
+{
+  display:flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width:800px){
+  .menu-body{
+    max-width: 600px;
+  }
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 80%;
+    margin-top: 0;
+  }
+  .row{flex-direction: column;}
+
+  .hero-text {
+    font-size: 30px;
+  }
+
+  .menu-body{
+    max-width: 300px;
+  }
+}
