@@ -28,6 +28,19 @@ body{
     background-color: #d3ac43;
   }
 
+  .sticky
+  {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:1;
+    opacity: .75;
+  }
+  
+  .sticky + #content {
+    padding-top: 60px;
+  }
+
 .topnav a {
     float: left;
     text-align: center;

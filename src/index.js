@@ -1,19 +1,38 @@
-import {renderNavBar, renderHeroImage} from './modules/renderHeader.js'
-import { renderAbout, removeAbout} from './modules/renderAbout.js';
-import { renderFooter } from './modules/renderFooter.js';
+import {renderNavBar,renderHeroImage} from './modules/header.js'
+import * as About from './modules/about.js';
+import { renderFooter } from './modules/footer.js';
+import {renderContact,removeContact} from './modules/contact';
+import {renderMenu, removeMenu} from './modules/menu';
 
 "use strict";
 
-let container=document.querySelector("#content");
+let container=document.querySelector("#content"); //the main parent element all items rendered within
 
+//render initial homepage
 renderNavBar(container);
 renderHeroImage(container);
-renderAbout(container,false);
+About.renderAbout(container,false);
 renderFooter(container);
 
+
+//add event listeners to each navbar section so they display their corresponding sections
 let homeAnchor = document.querySelector("#home");
-homeAnchor.addEventListener("click",()=> {renderAbout(container,true)});
+homeAnchor.addEventListener("click",() => {
+    removeContact();
+    removeMenu();
+    About.renderAbout(container,true);
+});
 
+let contactAnchor=document.querySelector("#contact");
+contactAnchor.addEventListener("click",() => {
+    About.removeAbout();
+    removeMenu();
+    renderContact(container,true)
+});
 
-//make removeAbout function available in console for testing, remove later
-window.removeAbout=removeAbout;
+let menuAnchor=document.querySelector("#menu");
+menuAnchor.addEventListener("click",() => {
+    About.removeAbout();
+    removeContact();
+    renderMenu(container,true);
+});

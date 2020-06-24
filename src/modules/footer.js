@@ -1,5 +1,9 @@
 "use strict";
 
+/**
+ * Generates a footer with some text and a link to the repo within a given parent container.
+ * @param {Element} divContainer The parent element to render the footer within. 
+ */
 function renderFooter(divContainer)
 {
     let footer=document.createElement("footer");

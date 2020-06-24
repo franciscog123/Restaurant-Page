@@ -1,7 +1,11 @@
 "use strict";
 
-//if parameter footerExists is true, renders about section before the footer
-//if false, renders about section by adding it to the end of the container
+/**
+ * if parameter footerExists is true, renders about section before the footer.
+ * If false, renders about section by adding it to the end of the container
+ * @param {Element} divContainer the parent element to render the footer within 
+ * @param {boolean} footerExists represents whether a footer exists in the current DOM
+ */
 function renderAbout(divContainer, footerExists)
 {
     var elementExists=document.querySelector(".homeText");
@@ -48,7 +52,9 @@ function renderAbout(divContainer, footerExists)
     }
 }
 
-//removes about section if it exists
+/**
+ * Removes About section if it exists.
+ */
 function removeAbout()
 {
     let about=document.querySelector(".homeText");
