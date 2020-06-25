@@ -1,3 +1,5 @@
+import Map from '../images/map.jpg'
+
 /**
  * if parameter footerExists is true, renders contact section before the footer.
  * If false, renders contact section by adding it to the end of the container
@@ -34,7 +36,7 @@ export function renderContact (divContainer, footerExists)
         row.appendChild(column1);
 
         let img=document.createElement("img");
-        img.src="./images/map.jpg";
+        img.src=Map;
         img.style.width="100%";
         column1.appendChild(img);
 

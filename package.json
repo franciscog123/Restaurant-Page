@@ -4,7 +4,8 @@
   "description": "A restaurant homepage dynamically rendered with Javascript alone",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,11 @@
   },
   "homepage": "https://github.com/franciscog123/restaurant-page#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
+    "image-webpack-loader": "^6.0.0",
+    "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
   }

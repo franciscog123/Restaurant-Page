@@ -1,5 +1,7 @@
 "use strict";
 
+import Logo from '../images/GitHub-Mark-Light-120px-plus.png';
+
 /**
  * Generates a footer with some text and a link to the repo within a given parent container.
  * @param {Element} divContainer The parent element to render the footer within. 
@@ -19,7 +21,7 @@ function renderFooter(divContainer)
     link.href="https://github.com/franciscog123/restaurant-page";
 
     let image=document.createElement("img");
-    image.src="./images/GitHub-Mark-Light-120px-plus.png";
+    image.src=Logo ;
     image.style.border=0;
     image.style.height="50px";
     image.style.width="50px";

@@ -1,6 +1,6 @@
 @font-face{
     font-family: 'Taco Modern';
-    src: url(./fonts/TACOM___.TTF);
+    src: url(./fonts/TACOM.ttf) format('truetype');
 }
 
 body, html {
@@ -24,6 +24,9 @@ body{
 }
 
 .topnav {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
     overflow: hidden;
     background-color: #d3ac43;
   }
@@ -34,7 +37,7 @@ body{
     top: 0;
     width: 100%;
     z-index:1;
-    opacity: .75;
+    opacity: .8;
   }
   
   .sticky + #content {

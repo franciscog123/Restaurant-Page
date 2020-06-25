@@ -1,3 +1,5 @@
+import './styles.css';
+
 import {renderNavBar,renderHeroImage} from './modules/header.js'
 import * as About from './modules/about.js';
 import { renderFooter } from './modules/footer.js';
